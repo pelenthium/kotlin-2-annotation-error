@@ -2,6 +2,11 @@ import java.net.URI
 
 plugins {
     id("org.jetbrains.kotlin.jvm")
+    id("com.gradleup.shadow")
+}
+
+tasks.jar {
+    manifest.attributes["Main-Class"] = "MainKt"
 }
 
 dependencies {
